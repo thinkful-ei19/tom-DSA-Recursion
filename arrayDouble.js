@@ -8,10 +8,11 @@
 function arrayDouble(arr) {
   //base case
   if (arr.length === 0) {
-    return arr[0];
+    return arr;
   }
   // recursive case
-  return arrayDouble(arr.slice(1)) ;
+  const doubled = arr[0] * 2;
+  return [doubled, ...arrayDouble(arr.slice(1))];
 }
 
 const arr = [1, 2, 3];
