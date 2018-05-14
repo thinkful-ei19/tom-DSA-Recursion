@@ -11,6 +11,7 @@ function nthTriangularNumber(arr) {
   if (arr.length === 0) {
     return arr;
   }
+  // recursive case 
   const triangle = ((arr[0])*(arr[0] + 1)) / (2);
   return [triangle, ...nthTriangularNumber(arr.slice(1))];
 }
